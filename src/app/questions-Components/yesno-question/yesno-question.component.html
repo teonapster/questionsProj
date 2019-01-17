@@ -1,0 +1,7 @@
+
+<div class="container">
+  <div *ngFor="let answer of answers">
+    <input type="radio" name="answer" value="{{answer}}" (change)="radioChangeHandler($event)">
+    {{answer}}</div>
+  <p>your answer {{answer}}</p>
+</div>

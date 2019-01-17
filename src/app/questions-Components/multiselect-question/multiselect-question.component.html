@@ -1,0 +1,16 @@
+<div class="container">
+   <form >
+        <label class="checkbox-inline" *ngFor="let option of options">
+            
+        <input 
+            type="checkbox" 
+            value="{{option}}"
+            (change)="answerChanged($event)"
+            [disabled]="isActive"
+            [checked]="isChecked"
+           >{{option}}</label>
+    </form>
+    <button class="btn btn-primary" (click)="onReset()">Reset answers</button>
+    <p>Max Answer:{{max}}</p>
+    <p>Your answer: {{answers}}</p>
+</div>
